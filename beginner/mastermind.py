@@ -50,24 +50,24 @@ else:
 
         # when not all the digits are guessed correctly.
         # if (count < 4) and (count != 0): - this condition is not needed as we are starting with the condition, n!=num, which is, count<4
-         print("Not quite the number. But you did get ",
+        print("Not quite the number. But you did get ",
                   count, " digit(s) correct!")
           # second code is not supposed to print the guessed numbers, from the sample output, here I get we are not recording the position of the guess,but count. But as per the explanation, the code should not print the guessed numbers, rather give their count.
             # print("Also these numbers in your input were correct.")
             # for k in correct:
             #    print(k, end=' ')
-          print('\n')
-          print('\n')
-          n = int(input("Enter your next choice of numbers: "))
+        print('\n')
+        print('\n')
+        n = int(input("Enter your next choice of numbers: "))
 
         # when none of the digits are guessed correctly.
         elif (count == 0):
-            print("None of the numbers in your input match.")
-            n = int(input("Enter your next choice of numbers: "))
+        print("None of the numbers in your input match.")
+        n = int(input("Enter your next choice of numbers: "))
 
     # condition for equality.
     if n == num:
     # ctr must be incremented when the n==num gets executed as we have the other incrmentation in the n!=num condition
         ctr+=1
-          print("You've become a Mastermind!")
+        print("You've become a Mastermind!")
         print("It took you only", ctr, "tries.")

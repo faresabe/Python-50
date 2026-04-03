@@ -8,7 +8,6 @@ def rm_common(a, b):
                 return [a + ["*"] + b, True]
     return [a + ["*"] + b, False]
 
-
 if __name__ == "__main__":
     n1 = list(input("Player 1 name: ").lower().replace(" ", ""))
     n2 = list(input("Player 2 name: ").lower().replace(" ", ""))

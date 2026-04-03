@@ -1,9 +1,9 @@
 import random
 
-
 # the .randrange() function generates a
 # random number within the specified range.
 num = random.randrange(1000, 10000)
+num_str = str(num)  # Convert once
 
 n = int(input("Guess the 4 digit number:"))
 
@@ -24,50 +24,35 @@ else:
         # guesses were made.
         ctr += 1
 
-        count = 0
-
         # explicit type conversion of an integer to
         # a string in order to ease extraction of digits
-        n = str(n)
+        n_str = str(n)
 
-        # explicit type conversion of a string to an integer
-        num = str(num)
+        bulls = 0
+        cows = 0
+        used = [False] * 4
 
-        # correct[] list stores digits which are correct
-        correct = ['X']*4
+        # First, count bulls (correct position)
+        for i in range(4):
+            if n_str[i] == num_str[i]:
+                bulls += 1
+                used[i] = True
 
-        # for loop runs 4 times since the number has 4 digits.
-        for i in range(0, 4):
+        # Then, count cows (correct digit, wrong position)
+        for i in range(4):
+            if not used[i]:  # Only check if not already a bull
+                for j in range(4):
+                    if not used[j] and n_str[i] == num_str[j]:
+                        cows += 1
+                        used[j] = True
+                        break
 
-            # checking for equality of digits
-            if (n[i] == num[i]):
-                # number of digits guessed correctly increments
-                count += 1
-                # hence, the digit is stored in correct[].
-                correct[i] = n[i]
-            else:
-                continue
+        if bulls == 4:
+            break  # Should not happen here, but safety
 
-        # when not all the digits are guessed correctly.
-        # if (count < 4) and (count != 0): - this condition is not needed as we are starting with the condition, n!=num, which is, count<4
-        print("Not quite the number. But you did get ",
-                  count, " digit(s) correct!")
-          # second code is not supposed to print the guessed numbers, from the sample output, here I get we are not recording the position of the guess,but count. But as per the explanation, the code should not print the guessed numbers, rather give their count.
-            # print("Also these numbers in your input were correct.")
-            # for k in correct:
-            #    print(k, end=' ')
-        print('\n')
-        print('\n')
+        print(f"Not quite the number. Bulls: {bulls}, Cows: {cows}")
         n = int(input("Enter your next choice of numbers: "))
 
-        # when none of the digits are guessed correctly.
-        elif (count == 0):
-        print("None of the numbers in your input match.")
-        n = int(input("Enter your next choice of numbers: "))
-
-    # condition for equality.
-    if n == num:
-    # ctr must be incremented when the n==num gets executed as we have the other incrmentation in the n!=num condition
-        ctr+=1
-        print("You've become a Mastermind!")
-        print("It took you only", ctr, "tries.")
+    # After loop, success
+    print("You've become a Mastermind!")
+    print("It took you only", ctr + 1, "tries.")

@@ -185,4 +185,4 @@ while resp is 1:
                     no_of_days.append(m)
 
     check(no_of_days, row_num, y)
-    resp = int(input('another subject ? 1---->yes 0--->no'))
+    resp = int(input('another subject ? 1--->yes 0--->no'))

@@ -146,11 +146,10 @@ while resp is 1:
     else:
         x = [int(input('roll no :'))]
 
-    # list to hold row of the student in Excel sheet
+    
     row_num = []
 
-    # list to hold total no.of leaves
-    # taken by ith student
+    
     no_of_days = []
 
     for student in x:

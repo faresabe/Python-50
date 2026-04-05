@@ -6,13 +6,13 @@ from email.mime.text import MIMEText
 # loading the excel sheet
 book = openpyxl.load_workbook('D:\\attendance.xlsx')
 
-# Choose the sheet
+
 sheet = book['Sheet1']
 
-# counting number of rows / students
+
 r = sheet.max_row
 
-# variable for looping for input
+
 resp = 1
 
 # counting number of columns / subjects

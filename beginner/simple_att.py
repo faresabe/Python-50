@@ -30,7 +30,7 @@ l3 = []
 
 staff_mails = ['erakshaya485@gmail.com', 'yyyyyyyy@gmail.com']
 
-# Warning messages
+
 m1 = "warning!!! you can take only one more day leave for CI class"
 m2 = "warning!!! you can take only one more day leave for python class"
 m3 = "warning!!! you can take only one more day leave for DM class"
@@ -43,19 +43,19 @@ def savefile():
 
 def check(no_of_days, row_num, b):
 
-    # to use the globally declared lists and strings
+   
     global staff_mails
     global l2
     global l3
 
     for student in range(0, len(row_num)):
-        # if total no.of.leaves equals threshold
+        
         if no_of_days[student] is 2:
             if b is 1:
                 
-                # mail_id appending
+               
                 l1.append(sheet.cell(row=row_num[student], column=2).value)
-                mailstu(l1, m1)  # sending mail
+                mailstu(l1, m1)  
             elif b is 2:
                 l1.append(sheet.cell(row=row_num[student], column=2).value)
                 mailstu(l1, m2)

@@ -86,10 +86,10 @@ def check(no_of_days, row_num, b):
    
         if l2 != "" and len(l3) != 0:
 
-            # message for student
+            
             msg1 = "you have lack of attendance in " + subject + " !!!"
 
-            # message for staff
+            
             msg2 = "the following students have lack of attendance in your subject : "+l2
 
             mailstu(l3, msg1)  # mail to students
@@ -104,7 +104,7 @@ def mailstu(li, msg):
     s.starttls()
     s.login(from_id, pwd)
 
-    # for each student to warn send mail
+
     for i in range(0, len(li)):
         to_id = li[i]
         message = MIMEMultipart()
@@ -115,7 +115,7 @@ def mailstu(li, msg):
         s.quit()
     print("mail sent to students")
 
-# for staff
+
 def mailstaff(mail_id, msg):
     from_id = 'crazygirlaks@gmail.com'
     pwd = 'ERAkshaya485'
@@ -135,10 +135,10 @@ def mailstaff(mail_id, msg):
 while resp is 1:
     print("1--->CI\n2--->python\n3--->DM")
 
-    # enter the correspondingnumber
+    
     y = int(input("enter subject :"))
 
-    # no.of.absentees for that subject
+
     no_of_absentees = int(input('no.of.absentees :'))
 
     if(no_of_absentees > 1):

@@ -63,17 +63,16 @@ def check(no_of_days, row_num, b):
                 l1.append(sheet.cell(row=row_num[student], column=2).value)
                 mailstu(l1, m3)
 
-        # if total.no.of.leaves > threshold
+        
         elif no_of_days[student] > 2:
             if b is 1:
 
-                # adding roll no
+              
                 l2 = l2+str(sheet.cell(row=row_num[student], column=1).value)
 
-                # student mail_id appending
+               
                 l3.append(sheet.cell(row=row_num[student], column=2).value)
-                subject = "CI"  # subject based on the code number
-
+                subject = "CI"  
             elif b is 2:
                 l2 = l2+str(sheet.cell(row=row_num[student], column=1).value)
                 l3.append(sheet.cell(row=row_num[student], column=2).value)
@@ -84,7 +83,7 @@ def check(no_of_days, row_num, b):
                 l3.append(sheet.cell(row=row_num[student], column=2).value)
                 subject = "Data mining"
 
-        # If threshold crossed, modify the message
+   
         if l2 != "" and len(l3) != 0:
 
             # message for student

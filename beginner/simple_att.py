@@ -3,7 +3,7 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-# loading the excel sheet
+
 book = openpyxl.load_workbook('D:\\attendance.xlsx')
 
 
@@ -15,20 +15,19 @@ r = sheet.max_row
 
 resp = 1
 
-# counting number of columns / subjects
+
 c = sheet.max_column
 
-# list of students to remind
+
 l1 = []
 
-# to concatenate list of roll numbers with
-# lack of attendance
+
 l2 = ""
 
-# list of roll numbers with lack of attendance
+
 l3 = []
 
-# staff mail ids
+
 staff_mails = ['erakshaya485@gmail.com', 'yyyyyyyy@gmail.com']
 
 # Warning messages

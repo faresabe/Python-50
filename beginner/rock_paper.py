@@ -12,7 +12,6 @@ while True:
 
     
     choice = int(input("Enter your choice: "))
-
     
     while choice > 3 or choice < 1:
         choice = int(input('Enter a valid choice please ☺: '))

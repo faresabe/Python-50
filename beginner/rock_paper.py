@@ -20,7 +20,6 @@ while True:
     else:
         choice_name = 'Scissors'
 
-    
     print('User choice is:', choice_name)
     print("Now it's Computer's Turn...")
 

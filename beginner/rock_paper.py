@@ -25,7 +25,6 @@ while True:
     
     comp_choice = random.randint(1, 3)
 
-    
     if comp_choice == 1:
         comp_choice_name = 'Rock'
     elif comp_choice == 2:

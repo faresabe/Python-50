@@ -34,7 +34,6 @@ while True:
 
     print("Computer choice is:", comp_choice_name)
     print(choice_name, 'vs', comp_choice_name)
-
     
     if choice == comp_choice:
         result = "DRAW"

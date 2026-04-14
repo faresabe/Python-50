@@ -17,7 +17,6 @@ def hash_file(fileName1, fileName2):
             
     with open(fileName2, "rb") as file:
 
-        
         chunk = 0
         while chunk != b'':
             chunk = file.read(1024)

@@ -31,7 +31,6 @@ while True:
         comp_choice_name = 'Paper'
     else:
         comp_choice_name = 'Scissors'
-
     print("Computer choice is:", comp_choice_name)
     print(choice_name, 'vs', comp_choice_name)
     

@@ -16,7 +16,6 @@ def check(xyz):
             return False
         i += 1
     return True
-
 def start1():
     xyz = []
     last = 0

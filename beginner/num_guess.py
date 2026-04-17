@@ -2,7 +2,6 @@ import random
 import math
 UpperBound = int(input("Enter the Upper Bound Number: "))
 LowerBound = int(input("Enter the Lower Bound Number: "))
-
 if LowerBound > UpperBound:
     print("Lower bound must be less than upper bound")
     exit()

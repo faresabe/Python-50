@@ -8,7 +8,6 @@ if LowerBound > UpperBound:
     print("Lower bound must be less than upper bound")
     exit()
 
-
 Num = random.randint(LowerBound,UpperBound)
 Loop = int(math.ceil(math.log(UpperBound - LowerBound + 1 ,2)))
 Won = False

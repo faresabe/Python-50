@@ -32,7 +32,7 @@ if __name__ == '__main__':
         '<h2><img src="https://media.geeksforgeeks.org/wp-content/uploads/20210720224119/MessagingHappyicon.png" width="7%"> Fun Fact Generator</h2>'
         '</p>'
     )
-    
+  
     put_buttons(
         [dict(label='Click me', value='outline-success', color='outline-success')],
         onclick=get_fun_fact

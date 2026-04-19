@@ -11,7 +11,7 @@ Loop = int(math.ceil(math.log(UpperBound - LowerBound + 1 ,2)))
 Won = False
 
 while Loop > 0:
-    
+
     try:
          Ask = int(input("Guess A Number: "))
     except ValueError:

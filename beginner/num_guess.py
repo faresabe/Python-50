@@ -11,7 +11,7 @@ Won = False
 
 while Loop > 0:
 
-    try: 
+    try:  
          Ask = int(input("Guess A Number: "))
     except ValueError:
         print("Enter a valid number")

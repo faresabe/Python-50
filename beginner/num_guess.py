@@ -8,7 +8,7 @@ if LowerBound > UpperBound:
 Num = random.randint(LowerBound,UpperBound)
 Loop = int(math.ceil(math.log(UpperBound - LowerBound + 1 ,2)))
 Won = False
-
+ 
 while Loop > 0: 
  
     try:   

@@ -15,7 +15,6 @@ while Loop > 0:
          Ask = int(input("Guess A Number: "))
     except ValueError:
         print("Enter a valid number")
-    
    
     if Ask > Num:
         print("Number too High Try Again")

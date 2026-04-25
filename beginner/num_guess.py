@@ -25,6 +25,5 @@ while Loop > 0:
         print("Congra , YOU WON")
         break
     Loop -=1  
-
 if Won == False:
   print("You Lose the number was," , Num)  

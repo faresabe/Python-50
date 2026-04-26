@@ -27,4 +27,4 @@ while Loop > 0:
     Loop -=1  
 if Won == False:
   print("You Lose the number was," , Num)  
- 
+  

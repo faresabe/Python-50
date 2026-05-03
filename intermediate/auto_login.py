@@ -11,7 +11,7 @@ def startBot(username, password, url):
     driver = webdriver.Chrome(path)
     
     # opening the website  in chrome.
-    driver.get(url)
+    driver.get(url) 
     
     # find the id or name or class of
     # username by inspecting on username input
@@ -22,7 +22,7 @@ def startBot(username, password, url):
     driver.find_element_by_name(
         "id/class/name of password").send_keys(password)
     
-    # click on submit
+    
     driver.find_element_by_css_selector(
         "id/class/name/css selector of login button").click()
 

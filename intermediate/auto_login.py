@@ -12,7 +12,7 @@ def startBot(username, password, url):
     
     # opening the website  in chrome.
     driver.get(url)  
-      
+       
     # find the id or name or class of
     # username by inspecting on username input
     driver.find_element_by_name(

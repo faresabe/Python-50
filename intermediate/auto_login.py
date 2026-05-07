@@ -14,7 +14,7 @@ def startBot(username, password, url):
     driver.get(url)     
         
     # find the id or name or class of
-    # username by inspecting on username input
+    # username by inspecting on u sername input
     driver.find_element_by_name(
         "id/class/name of username").send_keys(username)
     
